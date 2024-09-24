@@ -13,8 +13,9 @@
         </div>
         <nav>
             <a href="#">Home</a>
-            <a href="#">About ODOP</a>
+            <a href="#odop">About ODOP</a>
             <a href="#">District Products</a>
+            <a href="#">Chat with Bot</a>
             <a href="#">Contact Us</a>
         </nav>
         <div class="hamburger-menu">
@@ -33,55 +34,131 @@
             <h1>One District One Product - Telangana</h1>
             <p>Discover unique products from every district in Telangana that reflect rich heritage and local craftsmanship.</p>
             <a href="#district-map" class="button">Explore Districts</a>
+            <a href="#prod" class="button">Explore Products</a>
         </div>
     </section>
 
-    <section class="about">
-        <h2>About ODOP Telangana</h2>
-        <p>The One District One Product initiative in Telangana aims to promote local crafts, food, and specialties that are unique to each district. By focusing on a single product from every district, ODOP fosters rural economic growth and cultural preservation.</p>
+    <section class="about-odop" id="odop">
+        <h2>About One District One Product (ODOP)</h2>
+        <p>
+            The One District One Product (ODOP) initiative aims to promote the unique products from each district, encouraging local artisans and businesses. By focusing on the distinctive crafts and goods of each area, ODOP supports economic growth and preserves traditional skills.
+        </p>
     </section>
+    
 
     <section class="map" id="district-map">
         <h2>Select a District</h2>
         <div class="telangana-map-container">
             <img src="https://upload.wikimedia.org/wikipedia/commons/f/f4/TG-districts-te.svg" alt="Telangana District Map" height="630" width="667" usemap="#image-map">
             <map name="image-map">
-                <area target="" alt="Yadadri" title="Yadadri: Pochampally Ikat" href="districts/yadadri.html" coords="345,379,310,395,309,376,302,354,304,337,317,328,332,335,341,347,351,356,364,361,370,364,325,387,348,374,342,376" shape="poly">
+                <area target="" alt="Yadadri" title="Yadadri: Pochampally Ikkat" href="districts/yadadri.html" coords="345,379,310,395,309,376,302,354,304,337,317,328,332,335,341,347,351,356,364,361,370,364,325,387,348,374,342,376" shape="poly">
                 <area target="" alt="Hyderabad" title="Hyderabad: Pearl Jewelry" href="districts/hyderabad.html" coords="242,365,259,350,271,361,260,377" shape="poly">
                 <area target="" alt="Khammam" title="Khammam: Bamboo Products" href="districts/khammam.html" coords="428,378,440,369,450,374,463,366,470,350,484,348,485,369,495,373,510,375,529,375,535,384,533,396,518,398,494,394,484,402,477,411,496,416,504,426,485,425,464,409,453,405,435,394" shape="poly">
-                <area target="" alt="Nizamabad" title="Nizamabad: Nizamabad Black Pottery" href="districts/nizamabad.html" coords="177,209,190,195,201,194,217,185,233,182,244,183,256,184,262,203,265,215,257,229,243,235,222,233,210,228,200,233,183,230,173,214" shape="poly">
+                <area target="" alt="Nizamabad" title="Nizamabad: Black Pottery" href="districts/nizamabad.html" coords="177,209,190,195,201,194,217,185,233,182,244,183,256,184,262,203,265,215,257,229,243,235,222,233,210,228,200,233,183,230,173,214" shape="poly">
             </map>
             <div class="tooltip" id="tooltip"></div>
         </div>
     </section>
 
-    <section class="district-products">
-        <h2>District Products</h2>
-        <div class="product-grid">
-            <div class="product-card">
-                <h3>Hyderabad</h3>
-                <p>Pearl Jewelry</p>
+    <section class="district-products" id="prod">
+        <h2>District Wise Products</h2>
+        <div class="product-scroll-container">
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="assets/hyd-pearls.jpg" alt="Hyderabad Pearl Jewelry">
+                    <h3>Hyderabad</h3>
+                    <p>Pearl Jewelry</p>
+                </div>
+                <div class="product-card">
+                    <img src="assets/poc-ikkat.jpg" alt="Yadadri Pochampally Ikkat">
+                    <h3>Yadadri</h3>
+                    <p>Pochampally Ikkat</p>
+                </div>
+                <div class="product-card">
+                    <img src="assets/kha-bamboo.jpg" alt="Khammam Bamboo Products">
+                    <h3>Khammam</h3>
+                    <p>Bamboo Products</p>
+                </div>
+                <div class="product-card">
+                    <img src="assets/niz-pottery.png" alt="Nizamabad: Black Pottery">
+                    <h3>Nizamabad</h3>
+                    <p>Black Pottery</p>
+                </div>
+                <div class="product-card">
+                    <img src="assets/hyd-pearls.jpg" alt="Hyderabad Pearl Jewelry">
+                    <h3>Hyderabad</h3>
+                    <p>Pearl Jewelry</p>
+                </div>
+                <div class="product-card">
+                    <img src="assets/poc-ikkat.jpg" alt="Yadadri Pochampally Ikkat">
+                    <h3>Yadadri</h3>
+                    <p>Pochampally Ikkat</p>
+                </div>
+                <div class="product-card">
+                    <img src="assets/kha-bamboo.jpg" alt="Khammam Bamboo Products">
+                    <h3>Khammam</h3>
+                    <p>Bamboo Products</p>
+                </div>
+                <div class="product-card">
+                    <img src="assets/niz-pottery.png" alt="Nizamabad: Black Pottery">
+                    <h3>Nizamabad</h3>
+                    <p>Black Pottery</p>
+                </div>
+                <!-- Add more products as needed -->
             </div>
-            <div class="product-card">
-                <h3>Warangal</h3>
-                <p>Warangal Durries</p>
-            </div>
-            <div class="product-card">
-                <h3>Nalgonda</h3>
-                <p>Nalgonda Handloom</p>
-            </div>
-            <div class="product-card">
-                <h3>Karimnagar</h3>
-                <p>Silver Filigree</p>
-            </div>
-            <!-- Add more products for each district as needed -->
         </div>
     </section>
+    
+
+    <section class="testimonials">
+        <h2>Testimonials</h2>
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <img src="assets/testimonial1.jpg" alt="Customer 1" class="testimonial-image">
+                <p>"The products from Telangana are unique and of high quality. I love my Pochampally Ikat!"</p>
+                <h3>Sita</h3>
+                <p>Happy Customer</p>
+            </div>
+            <div class="testimonial-card">
+                <img src="assets/testimonial2.jpg" alt="Customer 2" class="testimonial-image">
+                <p>"I was amazed by the craftsmanship in the Pearl Jewelry from Hyderabad. Highly recommend!"</p>
+                <h3>Ram</h3>
+                <p>Satisfied Client</p>
+            </div>
+        </div>
+    </section>
+    
+
 
     <footer>
-        <p>&copy; 2024 ODOP Telangana. All Rights Reserved.</p>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: info@odop-telangana.com</p>
+                <p>Phone: +91 123 456 7890</p>
+            </div>
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="#product-catalog">District-wise Product Catalog</a></li>
+                    <li><a href="#government-schemes">Government Schemes</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-media">
+                    <a href="#"><img src="assets/facebook-icon.png" alt="Facebook"></a>
+                    <a href="#"><img src="assets/twitter-icon.png" alt="Twitter"></a>
+                    <a href="#"><img src="assets/instagram-icon.png" alt="Instagram"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p> 2024 One District One Product, Telangana. All rights reserved.</p>
+            <p>&copy; Built By Team 5- Sathwik(21EG105C15), Sumith(21EG105C14), Pranay(21EG105C61)</p>
+        </div>
     </footer>
-
+    
     <script>
         const hamburger = document.querySelector('.hamburger-menu');
         const navMenu = document.querySelector('nav');
@@ -110,6 +187,37 @@
                 tooltip.style.opacity = '0';
             });
         });
+
+
+        const scrollContainer = document.querySelector('.product-scroll-container');
+const productCards = document.querySelectorAll('.product-card');
+const cardWidth = productCards[0].offsetWidth; // Get the width of a single card
+const totalCards = productCards.length;
+let currentIndex = 0;
+
+function autoScroll() {
+    // Scroll to the next card
+    currentIndex++;
+    
+    // If we've reached the end, loop back to the start
+    if (currentIndex >= totalCards) {
+        currentIndex = 0;
+    }
+
+    // Scroll to the next card position
+    scrollContainer.scrollTo({
+        left: currentIndex * cardWidth,
+        behavior: 'smooth'
+    });
+
+    // Call this function again after a set interval
+    setTimeout(autoScroll, 1200); // Change the interval as needed
+}
+
+// Start the automatic scrolling
+autoScroll();
+
+
     </script>
     
 </body>
