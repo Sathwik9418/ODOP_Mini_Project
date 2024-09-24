@@ -24,6 +24,7 @@ body {
     justify-content: flex-end; /* Align items to the right */
     align-items: center;
 }
+
 .logo {
     margin-right: auto; /* Ensure logo stays to the left */
 }
@@ -84,16 +85,14 @@ nav a:hover {
     text-align: center;
     color: #fff;
     z-index: 2; /* Ensure content appears above the overlay */
-    
-}
-.hero-content h1{
-    font-family: "Source Sans Pro", "Arial", sans-serif;
-    /* Use the selected font */
-    font-size: 3em; /* Adjust the size as needed */
-    color:white; /* Optional: Change color */
-    text-align: center; /* Optional: Center align */
 }
 
+.hero-content h1 {
+    font-family: "Source Sans Pro", "Arial", sans-serif;
+    font-size: 3em; /* Adjust the size as needed */
+    color: white; /* Optional: Change color */
+    text-align: center; /* Optional: Center align */
+}
 
 /* Product Description Section */
 .product-description {
@@ -101,24 +100,27 @@ nav a:hover {
     max-width: 1200px;
     margin: 50px auto;
     padding: 20px;
+    align-items: flex-start; /* Align items to the top */
 }
 
 /* Left description */
 .left-description {
-    flex: 2;
+    flex: 2; /* Take 2/3 of the width */
     padding-right: 20px;
 }
-.left-description p{
+
+.left-description p {
     font-size: 20px; /* Adjust the size as needed */
     line-height: 1.6; /* Optional: improves readability */
 }
+
 /* Right box */
 .right-box {
-    flex: 1;
+    flex: 1; /* Take 1/3 of the width */
     display: flex;
-    justify-content: flex-end; /* Align to the right */
-    position: sticky; /* Make it scrollable */
-    top: 20px; /* Distance from the top */
+    justify-content: center; /* Center content inside the right box */
+    align-items: flex-start; /* Align items to the top */
+    margin-left: 20px; /* Add margin to create space between boxes */
 }
 
 .buy-now-container {
@@ -133,8 +135,9 @@ nav a:hover {
     align-items: center; /* Center horizontally */
     justify-content: center; /* Center vertically */
 }
-
-
+.buy-now-container h3{
+    position: top;
+}
 .buy-now-button {
     background-color: #333; /* Black background */
     color: white; /* White text */
@@ -147,6 +150,7 @@ nav a:hover {
     transition: transform 0.3s ease, background-color 0.3s ease;
     display: inline-block;
     width: 100%; /* Make the button full width */
+    position: bottom;
 }
 
 .buy-now-button:hover {
@@ -231,9 +235,17 @@ footer {
         display: block;
     }
 
-    .about,
-    .map,
-    .district-products {
-        padding: 20px;
+    /* Adjust product description layout for mobile */
+    .product-description {
+        flex-direction: column; /* Stack left and right sections for mobile */
+    }
+
+    .left-description {
+        padding-right: 0; /* Reset padding */
+        margin-bottom: 20px; /* Space below the left description */
+    }
+
+    .right-box {
+        justify-content: center; /* Center align for mobile */
     }
 }
