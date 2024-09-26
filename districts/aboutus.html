@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ODOP Telangana</title>
+    <style>
+        /* Internal CSS */
+        /* General styles for smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+            
+        }
+
+        /* Body reset and font settings */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Hero section styling */
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 100vh; /* Full viewport height */
+            overflow: hidden; /* Ensures no overflow from content */
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent black overlay */
+            
+        }
+
+        /* Hero image styling */
+        .hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures the image covers the entire section */
+            display: block; /* Ensures there's no inline spacing */
+        }
+
+        /* Hero content (text and buttons) */
+        .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: #fff; /* White text color */
+            z-index: 2; /* Ensures content appears on top of the image */
+        }
+
+        /* Hero heading */
+        .hero-content h1 {
+            font-size: 26px;
+            font-weight: bold;
+            margin: 0 0 20px 0;
+            color: rgb(255, 255, 255);
+        }
+
+        /* Button styling */
+        .button {
+            background-color: #333; /* Dark background */
+            color: white; /* White text */
+            padding: 10px 20px; /* Padding around the text */
+            border: none; /* No border */
+            cursor: pointer; /* Pointer cursor on hover */
+            border-radius: 13px; /* Rounded corners */
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            display: inline-block; /* Makes buttons behave like inline-block */
+            text-decoration: none; /* Removes default link underline */
+        }
+
+        /* Button hover effects */
+        .button:hover {
+            color: #000000; /* Black text on hover */
+            background-color: #f8f8f8; /* Lighter background on hover */
+            transform: scale(1.1); /* Slightly enlarges button on hover */
+            z-index: 1; /* Ensures button is on top when hovered */
+        }
+
+        /* Header CSS */
+        .hero-header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .logo {
+            margin-right: auto; /* Ensure logo stays to the left */
+        }
+
+        .logo img {
+            width: 100px;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #ffffff;
+            padding: 10px 15px;
+            border-radius: 13px;
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #000000;
+            background-color: #f8f8f8;
+            transform: scale(1.1);
+        }
+
+        /* Footer CSS */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-section {
+            flex: 1;
+            padding: 0 20px;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 10px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 5px;
+        }
+
+        .footer-section ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer-bottom {
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #bbb;
+        }
+
+        /* Social media icons styling */
+        .social-media {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .social-media a {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+        }
+
+        .social-media img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* About ODOP section with light yellow background */
+        .about-odop {
+            background-color: #fff9cc; /* Light yellow background */
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .about-odop h1 {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .about-odop p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #555;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* Responsive styles */
+        @media screen and (max-width: 700px) {
+            .about-odop {
+                padding: 30px 10px;
+            }
+
+            .about-odop h1 {
+                font-size: 28px;
+            }
+
+            .about-odop p {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="hero-header">
+        <div class="logo">
+            <img src="/assets/logo.png" alt="ODOP Telangana Logo">
+        </div>
+        <nav>
+            <a href="/index.html">Home</a>
+            <a href="/districts/aboutus.html">About ODOP</a>
+            <a href="/districts/product.html">District Products</a>
+            <a href="/forum.html">Discussions Forum</a>
+            <a href="#foot">Contact Us</a>
+        </nav>
+        <div class="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <img src="/assets/onedistrict one product.jpg" alt="One District One Product - Telangana" class="hero-image">
+        <div class="hero-content">
+            <h1>About Us</h1>
+        </div>
+    </section>
+
+    <!-- Middle Section -->
+    <section class="about-odop" id="odop">
+        <h1>About One District One Product (ODOP)</h1>
+        <p>
+            The One District One Product (ODOP) initiative is a visionary program launched by the Indian government to foster economic development by focusing on the unique products and specialties of each district across the country. This initiative seeks to highlight the local craftsmanship, agricultural produce, and traditional products, giving them national and international visibility. It also aims to enhance the skill development of local artisans and small business owners by creating an environment where they can thrive.
+            <br><br>
+            The core idea behind ODOP is that every district in India has a product, craft, or resource that is inherently tied to its cultural and geographical heritage. These products, often passed down through generations, reflect the history, traditions, and creativity of local artisans. For example, Pochampally Ikkat from Yadadri, Telangana, or Banarasi Silk Sarees from Varanasi, Uttar Pradesh, represent the essence of those regions. The ODOP initiative provides a platform to market such products, allowing these local businesses to reach wider audiences while preserving the cultural identity of these goods.
+            <br><br>
+            One of the key objectives of the ODOP program is to help improve employment opportunities in rural and semi-urban areas by promoting small and medium-sized enterprises (SMEs). It encourages the development of local economies by building strong value chains, from production to marketing, which benefits everyone involved—farmers, artisans, and traders. This program also works to bridge the gap between local producers and global markets through various schemes and collaborations with e-commerce platforms, enabling businesses to expand their reach.
+            <br><br>
+            ODOP is aligned with other major initiatives like Make in India and Vocal for Local, emphasizing the importance of self-reliance and sustainable development. By promoting locally produced goods, ODOP reduces dependency on imports, boosting domestic manufacturing. This also allows for better brand recognition of Indian products globally, leading to the creation of Geographical Indications (GI tags), which certify the origin and authenticity of these unique products.
+            <br><br>
+            The ODOP program extends support to these businesses through a variety of measures, including financial aid, capacity building, training in modern techniques, and marketing assistance. With government-backed efforts, local entrepreneurs are given the tools and resources they need to scale up production, improve product quality, and meet international standards.
+            <br><br>
+            In conclusion, the One District One Product (ODOP) initiative is a remarkable step toward harnessing India’s rich cultural and geographical diversity to create economic growth. It not only fosters local pride but also ensures the sustainability of indigenous crafts, empowering artisans and SMEs to contribute significantly to the national and global economy. Through ODOP, India celebrates its heritage while marching towards a future of economic self-reliance and global recognition.
+        </p>
+    </section>
+
+    <!-- Footer Section -->
+    <footer id="foot">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: info@odop-telangana.com</p>
+                <p>Phone: +91 123 456 7890</p>
+            </div>
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="/districts/product.html">District-wise Product Catalog</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-media">
+                    <a href="#"><img src="/assets/facebook-icon.png" alt="Facebook"></a>
+                    <a href="#"><img src="/assets/twitter-icon.png" alt="Twitter"></a>
+                    <a href="#"><img src="/assets/instagram-icon.png" alt="Instagram"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p> 2024 One District One Product, Telangana. All rights reserved.</p>
+            <p>&copy; Built By Team 5- Sathwik(21EG105C15), Sumith(21EG105C14), Pranay(21EG105C61)</p>
+        </div>
+    </footer>
+    <script src="https://cdn.botpress.cloud/webchat/v2.1/inject.js"></script>
+    <script src="https://mediafiles.botpress.cloud/3024ca4b-b5cb-417a-913a-5e9daf2b95bf/webchat/v2.1/config.js"></script>
+</body>
+</html>
